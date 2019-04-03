@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+      <ion-title>
+      List
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-toolbar><ion-searchbar></ion-searchbar></ion-toolbar>
+<ion-card  *ngFor="let s of students">
+	<ion-item>
+    <ion-icon name="person" slot="start"></ion-icon>
+    <ion-label>{{s.rollno}}. {{s.firstName}} {{s.lastName}}</ion-label>
+  <ion-button color="primary" (click)= editStudent(s)><ion-icon name="create"></ion-icon></ion-button>
+  <ion-button color="danger" (click)= deleteStudent(s)><ion-icon name="trash"></ion-icon></ion-button>    
+    </ion-item>
+
+  
+
+  <ion-card-content>
+   Class     : {{s.class}} <br/>
+   Birth-Date: {{s.birthdate}} <br/>
+   Subject   : {{s.subject}} <br/>
+   Teacher   : {{s.teacher}} <br/>
+   Address   : {{s.address}} <br/>
+   
+  </ion-card-content>
+
+</ion-card>
+ 
+
+</ion-content>

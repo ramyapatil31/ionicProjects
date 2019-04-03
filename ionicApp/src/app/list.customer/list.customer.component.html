@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+  	
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card  *ngFor="let c of customers">
+  <ion-item>
+    <ion-icon name="person" slot="start"></ion-icon>
+    <ion-label>{{c.name}}</ion-label>
+
+  <ion-button color="primary" (click)="editCustomer(c)"><ion-icon name="create"></ion-icon></ion-button>
+  <ion-button color="danger" (click)="deleteCustomer(c)"><ion-icon name="trash"></ion-icon></ion-button>
+  </ion-item> 
+
+  <ion-card-content>
+   <ion-icon name="mail" slot="start"></ion-icon> {{c.email}} <br/>
+   <ion-icon name="phone-portrait" slot="start"></ion-icon> {{c.phone}} <br/>
+   <ion-icon name="home" slot="start"></ion-icon> {{c.address}} <br/>
+   
+  </ion-card-content>
+
+</ion-card>
+
+</ion-content>

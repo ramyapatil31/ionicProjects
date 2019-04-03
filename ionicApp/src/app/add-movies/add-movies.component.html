@@ -1,0 +1,45 @@
+<ion-header>
+<ion-toolbar>
+<ion-buttons slot="start">
+<ion-menu-button></ion-menu-button>
+</ion-buttons>
+<ion-title>
+  Add Movie
+</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content padding>
+<ion-item>
+<ion-label position="floating">Name: </ion-label>
+<ion-input placeholder="Name" [(ngModel)]="movie.name"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating">Year: </ion-label>
+<ion-input placeholder="Year" [(ngModel)]="movie.year"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating">Url: </ion-label>
+<ion-input placeholder="Image" [(ngModel)]="movie.image_url"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating">Production: </ion-label>
+<ion-input placeholder="Address" [(ngModel)]="movie.production_house"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating">Rating: </ion-label>
+<ion-input placeholder="Phone" [(ngModel)]="movie.rating"></ion-input>
+</ion-item> 
+<ion-item>
+<ion-label position="floating">Type: </ion-label>
+<ion-input placeholder="Phone" [(ngModel)]="movie.type"></ion-input>
+</ion-item>   
+<ion-item>
+<ion-label position="floating">Language: </ion-label>
+<ion-input placeholder="Phone" [(ngModel)]="movie.language"></ion-input>
+</ion-item> 
+<ion-item>
+<ion-label position="floating">Date: </ion-label>
+<ion-input placeholder="Phone" [(ngModel)]="movie.date"></ion-input>
+</ion-item> 
+<ion-button shape="round" expand="full" (click)="addMovie(movie)"><b>Add</b></ion-button>
+</ion-content>
